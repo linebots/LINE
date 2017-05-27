@@ -9,6 +9,43 @@ LINE
 *May the LINE be with you...*
 
 
+Installation
+------------
+
+**2017.05.27
+
+Install Python:
+
+This project requires Python 2. It will not run under the latest Python 3. If you have Python 3 installed, it's not a problem. You may have multiple versions installed side-by-side. The latest version of Python 2 can be downloaded for all platforms [here](https://www.python.org/downloads/).
+
+Linux users installing Python from a repository should be sure to install the `pip` package. Typically something like `python27` and `python27-pip`.
+
+
+Install LINE from repository:
+
+The LINE library has a number of dependencies. The easiest way to install them is through the use of a Python package manager such as `pip` or `easy_install`.
+
+    pip install LINE
+
+
+Install LINE from source:
+
+Alternatively, you may wish to install the LINE library from the source files.
+
+    git clone https://github.com/Nilpo/LINE.git
+    cd LINE
+    python config.py
+    python setup.py install
+
+
+Uninstall Newer Versions of Apache Thrift:
+
+Whichever method you used to install LINE, you will have installed Apache Thrift as a dependency. The current version Thrift 0.10.0 is unsupported and needs to be downgraded to Thrift 0.9.3.
+
+    pip uninstall thrift
+    pip install thrift==0.9.3
+
+
 Update
 ------
 
