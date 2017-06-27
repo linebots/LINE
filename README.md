@@ -23,9 +23,10 @@ Linux users installing Python from a repository should be sure to install the `p
 
 **Install LINE from repository:**
 
-The LINE library has a number of dependencies. The easiest way to install them is through the use of a Python package manager such as `pip` or `easy_install`.
+The LINE library has a number of dependencies. The easiest way to install them is through the use of a Python package manager such as `pip` or `easy_install`. (After installing the LINE library with dependencies, remove it leaving the dependencies behind. This allows the use of the libary files included in this repository.)
 
     pip install LINE
+    pip uninstall LINE
 
 
 **Install LINE from source:**
@@ -44,6 +45,34 @@ Whichever method you used to install LINE, you will have installed Apache Thrift
 
     pip uninstall thrift
     pip install thrift==0.9.3
+
+
+**Set up Environmental Variables**
+
+It's a best practice to load private credentials from environment variables rather than hard-coding them into your project. This is the best way to handle login credentials such as usernames, passwords, and API keys.
+
+***For Windows:***
+
+ 1. Click **Start** and search for _Environment Variables_.
+ 2. Click **Edit the environment variables** to open the **System Properties** dialog.
+ 3. Click **Environment Variables**.
+ 4. In the **System variables** section, click **New**.
+ 5. For **Variable name**, enter _LINE_CLIENT_ID_.
+ 6. For **Variable value**, enter your email address.
+ 7. Click **OK**.
+ 8. Repeat 5-7 to set up _LINE_CLIENT_PASS_.
+ 
+
+***For Mac/Linux:***
+
+The `export` command is used to assign environmental variables to your current session. Adding this to your `.bash_profile` file with allows these settings to persist across sessions.
+
+    export LINE_CLIENT_ID="me@mymail.com" >> ~/.bash_profile
+    export LINE_CLIENT_PASS="password" >> ~/.bash_profile
+
+After adding these lines, you can reboot or reload your profile.
+
+    source ~/.bash_profile
 
 
 Update
