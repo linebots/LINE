@@ -8,8 +8,8 @@ line_id = os.environ["LINE_CLIENT_ID"]
 line_pass = os.environ["LINE_CLIENT_PASS"]
 
 try:
-    client = LineClient(line_id, line_pass, is_mac=False)
-    client = LineClient(authToken=client.authToken, is_mac=False)
+    client = LineClient(line_id, line_pass, com_name=os.uname()[1], is_mac=False)
+    client = LineClient(authToken=client.authToken, com_name=os.uname()[1], is_mac=False)
 except TalkException as e:
     print "Login Failed:", e.reason
     exit(0)
