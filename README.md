@@ -33,7 +33,7 @@ The LINE library has a number of dependencies. The easiest way to install them i
 
 Alternatively, you may wish to install the LINE library from the source files.
 
-    git clone https://github.com/Nilpo/LINE.git
+    git clone https://github.com/linebots/LINE.git
     cd LINE
     python config.py
     python setup.py install
