@@ -487,7 +487,7 @@ class LineClient(LineAPI):
     @check_auth
     def longPoll(self, count=50, debug=False):
         """Receive a list of operations that have to be processed by original
-        Line cleint.
+        Line client.
 
         :param count: number of operations to get from
         :returns: a generator which returns operations
