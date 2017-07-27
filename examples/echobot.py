@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # original: https://github.com/carpedm20/LINE/blob/master/examples/echobot.py
 
 from line import LineClient, LineGroup, LineContact
